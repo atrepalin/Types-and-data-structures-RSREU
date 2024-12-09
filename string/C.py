@@ -9,6 +9,7 @@ def prefix(s):
         p[i] = k
     return p
 
+
 text = input()
 
 s = input()
@@ -23,7 +24,7 @@ if len(text) != len(s):
 
 doubled = text + text
 
-p = prefix(s + '#' + doubled)
+p = prefix(s + "#" + doubled)
 for i in range(len(s) + 1, len(doubled) + len(s) + 1):
     if p[i] == len(s):
         print(len(s) - (i - 2 * len(s)))

@@ -1,12 +1,12 @@
 def dijkstra(matrix, start):
     n = len(matrix)
     used = [False] * n
-    dist = [float('inf')] * n
+    dist = [float("inf")] * n
     path = [[] for _ in range(n)]
     dist[start] = 0
 
     for _ in range(n):
-        min_dist = float('inf')
+        min_dist = float("inf")
         min_dist_index = -1
         for i in range(n):
             if not used[i] and dist[i] < min_dist:
@@ -24,6 +24,7 @@ def dijkstra(matrix, start):
 
     return dist, path
 
+
 n = int(input())
 
 matrix = [list(map(int, input().split())) for _ in range(n)]
@@ -34,7 +35,7 @@ dist, path = dijkstra(matrix, a - 1)
 
 dst = dist[b - 1]
 
-if dst == float('inf'):
+if dst == float("inf"):
     print(-1)
     exit()
 

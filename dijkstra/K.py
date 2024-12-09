@@ -1,7 +1,7 @@
 N, E = map(int, input().split())
 M = int(input())
 
-INF = float('inf')
+INF = float("inf")
 stops = [[] for _ in range(N + 1)]
 
 for _ in range(M):

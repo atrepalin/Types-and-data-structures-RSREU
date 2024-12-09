@@ -30,9 +30,7 @@ for i in range(1, n):
     k = max(0, min(z[i - left], right - i))
 
     while i + k < n and (
-        dist[k] == dist[i + k]
-        or dist[k] == INF
-        and i + k - dist[i + k] < i
+        dist[k] == dist[i + k] or dist[k] == INF and i + k - dist[i + k] < i
     ):
         k += 1
 

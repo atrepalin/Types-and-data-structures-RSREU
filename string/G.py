@@ -1,6 +1,6 @@
 text = input()
 
-modified_text = '#' + '#'.join(text) + '#'
+modified_text = "#" + "#".join(text) + "#"
 n = len(modified_text)
 p = [0] * n
 center = 0
@@ -13,7 +13,11 @@ for i in range(n):
     if i < right:
         p[i] = min(right - i, p[mirror])
 
-    while i + p[i] + 1 < n and i - p[i] - 1 >= 0 and modified_text[i + p[i] + 1] == modified_text[i - p[i] - 1]:
+    while (
+        i + p[i] + 1 < n
+        and i - p[i] - 1 >= 0
+        and modified_text[i + p[i] + 1] == modified_text[i - p[i] - 1]
+    ):
         p[i] += 1
 
     if i + p[i] > right:

@@ -19,6 +19,6 @@ for i in range(n):
 
 
 print(len(sources))
-print(*sources, sep='\n')
+print(*sources, sep="\n")
 print(len(sinks))
-print(*sinks, sep='\n')
+print(*sinks, sep="\n")

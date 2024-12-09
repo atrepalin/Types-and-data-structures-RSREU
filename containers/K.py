@@ -8,7 +8,7 @@ def max_significance(n, a):
     best_r = 0
 
     stack = []
-    
+
     for i in range(n):
         while stack and a[stack[-1]] >= a[i]:
             j = stack.pop()
@@ -19,7 +19,7 @@ def max_significance(n, a):
                 max_significance = current_significance
                 best_l = left_bound + 1
                 best_r = i - 1
-        
+
         stack.append(i)
 
     while stack:
@@ -33,6 +33,7 @@ def max_significance(n, a):
             best_r = n - 1
 
     return max_significance, best_l + 1, best_r + 1
+
 
 n = int(input().strip())
 a = list(map(int, input().strip().split()))

@@ -4,8 +4,8 @@ def groupby(iterable):
 
     stack = []
     current_key = iterable[0]
-    
-    for item in iterable:        
+
+    for item in iterable:
         if item == current_key:
             stack.append(item)
         else:
@@ -15,16 +15,17 @@ def groupby(iterable):
 
     yield (current_key, stack)
 
+
 def destroy_balls(balls, res=0):
     c = 0
     for _, group in groupby(balls):
-        lg = len(list(group)) 
+        lg = len(list(group))
         c += lg
-        if lg >= 3: 
-            return destroy_balls(balls[:c-lg] + balls[c:], res + lg)  
+        if lg >= 3:
+            return destroy_balls(balls[: c - lg] + balls[c:], res + lg)
     return res
 
 
 n, *balls = map(int, input().split())
 
-print(destroy_balls(balls)) 
+print(destroy_balls(balls))

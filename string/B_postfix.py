@@ -11,14 +11,15 @@ def z_func(s):
             left, right = i, i + z[i]
     return z
 
+
 text = input()
 
 s = input()
 
-p = z_func(s + '#' + text)
+p = z_func(s + "#" + text)
 
 for i in range(len(s) + 1, len(s) + len(text) + 1):
     if p[i] == len(s):
-        print(i - len(s) - 1, end=' ')
+        print(i - len(s) - 1, end=" ")
 
 print()

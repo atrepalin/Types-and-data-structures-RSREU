@@ -11,9 +11,10 @@ def z_func(s):
             left, right = i, i + z[i]
     return z
 
+
 n = int(input())
 s = input()
 
 s += s[::-1]
 
-print(*z_func(s)[-1:n-1:-1])
+print(*z_func(s)[-1 : n - 1 : -1])

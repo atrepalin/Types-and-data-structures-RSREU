@@ -158,6 +158,7 @@ class BinarySearchTree:
         print("." * level + str(node.data))
         self._print_tree(node.right, level + 1)
 
+
 bst = BinarySearchTree()
 
 for cmd in sys.stdin:

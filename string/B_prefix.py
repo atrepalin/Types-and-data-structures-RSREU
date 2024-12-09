@@ -9,14 +9,15 @@ def prefix(s):
         p[i] = k
     return p
 
+
 text = input()
 
 s = input()
 
-p = prefix(s + '#' + text)
+p = prefix(s + "#" + text)
 
 for i in range(len(s) + 1, len(s) + len(text) + 1):
     if p[i] == len(s):
-        print(i - 2 * len(s), end=' ')
+        print(i - 2 * len(s), end=" ")
 
 print()

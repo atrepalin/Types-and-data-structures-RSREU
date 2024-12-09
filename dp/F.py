@@ -1,5 +1,8 @@
 def update(i, j, dp):
-    dp[i][j] += dp[i - 2][j - 1] + dp[i - 2][j + 1] + dp[i - 1][j - 2] + dp[i + 1][j - 2]
+    dp[i][j] += (
+        dp[i - 2][j - 1] + dp[i - 2][j + 1] + dp[i - 1][j - 2] + dp[i + 1][j - 2]
+    )
+
 
 n, m = map(int, input().split())
 n += 2

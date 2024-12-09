@@ -4,10 +4,11 @@ def floyd(N, dist):
             for j in range(N):
                 dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
 
+
 N, M = map(int, input().split())
 roads = [list(map(int, input().split())) for _ in range(M)]
 
-inf = float('inf')
+inf = float("inf")
 dist = [[inf] * N for _ in range(N)]
 
 for i in range(N):

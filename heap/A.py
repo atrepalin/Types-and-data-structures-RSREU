@@ -42,6 +42,7 @@ class MaxHeap:
             return None
         return self.heap[1]
 
+
 n = int(input())
 
 h = MaxHeap()

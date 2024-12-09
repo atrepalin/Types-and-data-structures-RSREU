@@ -5,16 +5,19 @@ EPSILON = 1e-7
 
 section_stack = [0 for _ in range(MAX_SECTIONS)]
 
+
 def get_top_section_height():
     global stack_start, stack_end, heights
     assert stack_start < stack_end
     return heights[section_stack[stack_start]]
+
 
 def pop_from_stack():
     global stack_start
     assert stack_start < stack_end
     stack_start += 1
     return section_stack[stack_start - 1]
+
 
 def push_to_stack(section_index):
     global stack_end, stack_start, heights
@@ -25,6 +28,7 @@ def push_to_stack(section_index):
         stack_end -= 1
     section_stack[stack_end] = section_index
     stack_end += 1
+
 
 def redistribute_water(num_sections, initial_water_volume):
     global stack_start, stack_end, heights, water_levels
@@ -81,6 +85,7 @@ def redistribute_water(num_sections, initial_water_volume):
         current_section += 1
     for i in range(num_sections):
         print(f"{water_levels[i]:.6f}")
+
 
 n, C = input().split()
 n = int(n)

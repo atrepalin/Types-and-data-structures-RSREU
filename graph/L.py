@@ -1,5 +1,6 @@
 from collections import defaultdict, deque
 
+
 def build_tree(n, m, edges):
     graph = defaultdict(list)
     for u, v in edges:
@@ -8,7 +9,7 @@ def build_tree(n, m, edges):
 
     visited = [False] * (n + 1)
     spanning_tree_edges = []
-    
+
     def bfs(start):
         queue = deque([start])
         visited[start] = True
@@ -23,8 +24,9 @@ def build_tree(n, m, edges):
                         return
 
     bfs(1)
-    
+
     return spanning_tree_edges
+
 
 n, m = map(int, input().split())
 edges = [list(map(int, input().split())) for _ in range(m)]

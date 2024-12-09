@@ -3,6 +3,7 @@ def can_chop(D, A, K, B, M, X):
     S = D - D // M
     return X <= F * A + S * B
 
+
 A, K, B, M, X = map(int, input().split())
 
 left = 0

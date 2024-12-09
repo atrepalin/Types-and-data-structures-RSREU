@@ -12,6 +12,7 @@ def z_func(s):
             left, right = i, i + z[i]
     return z
 
+
 text = input()
 
 p = z_func(text)

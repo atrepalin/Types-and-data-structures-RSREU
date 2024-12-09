@@ -4,20 +4,20 @@ class Point:
         self.y = y
 
     def distance(self) -> float:
-        return (self.x ** 2 + self.y ** 2) ** 0.5
+        return (self.x**2 + self.y**2) ** 0.5
 
     def __eq__(self, other: "Point") -> bool:
         return self.distance() == other.distance()
-    
+
     def __lt__(self, other: "Point") -> bool:
         return self.distance() < other.distance()
-    
+
     def __gt__(self, other: "Point") -> bool:
         return self.distance() > other.distance()
-    
+
     def __str__(self) -> str:
         return f"{self.x} {self.y}"
-    
+
 
 n = int(input())
 

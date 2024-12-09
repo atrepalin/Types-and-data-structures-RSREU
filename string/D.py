@@ -9,6 +9,7 @@ def prefix(s):
         p[i] = k
     return p
 
+
 text = input()
 
 p = prefix(text)

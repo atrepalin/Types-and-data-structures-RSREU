@@ -1,5 +1,6 @@
 from collections import defaultdict, deque
 
+
 def is_bipartite(n, edges):
     graph = defaultdict(list)
     for u, v in edges:
@@ -17,7 +18,7 @@ def is_bipartite(n, edges):
                 if color[v] == 0:
                     color[v] = -color[u]
                     queue.append(v)
-                elif color[v] == color[u]: 
+                elif color[v] == color[u]:
                     return False
         return True
 
@@ -28,6 +29,7 @@ def is_bipartite(n, edges):
 
     first_table = [i for i in range(1, n + 1) if color[i] == 1]
     return "YES", first_table
+
 
 n, m = map(int, input().split())
 edges = [tuple(map(int, input().split())) for _ in range(m)]

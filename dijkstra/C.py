@@ -1,7 +1,8 @@
 import heapq
 
+
 def dijkstra_with_path(graph, start, end, n):
-    distances = [float('inf')] * n
+    distances = [float("inf")] * n
     distances[start] = 0
     predecessors = [-1] * n
     priority_queue = [(0, start)]
@@ -23,10 +24,8 @@ def dijkstra_with_path(graph, start, end, n):
                 predecessors[neighbor] = current_vertex
                 heapq.heappush(priority_queue, (distance, neighbor))
 
-
-    if distances[end] == float('inf'):
+    if distances[end] == float("inf"):
         return -1
-
 
     path = []
     current = end
